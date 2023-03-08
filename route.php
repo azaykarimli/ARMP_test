@@ -5,22 +5,13 @@ require_once 'PageController.php';
 function route($url)
 {
     switch ($url) {
-            //The first 3 cases are custom to local server so the urls must be set for each server
-        case '/projects/kayfa_projects/ARMP_test/':
-        case '/Projects/kayfa_projects/ARMP_test/index.php':
-        case 'C:\xampp\htdocs\Projects\kayfa_projects\ARMP_test\index.php':
+            //home
         case '/':
             return PageController::index();
-            //The first 3 cases are custom to local server so the urls must be set for each server
-        case '/projects/kayfa_projects/ARMP_test/folder1':
-        case '/Projects/kayfa_projects/ARMP_test/index.php/folder1':
-        case 'C:\xampp\htdocs\Projects\kayfa_projects\ARMP_test\index.php/folder1/':
+            //folder 1
         case '/folder1/':
             return PageController::folder1();
-            //The first 3 cases are custom to local server so the urls must be set for each server    
-        case '/projects/kayfa_projects/ARMP_test/folder2':
-        case '/Projects/kayfa_projects/ARMP_test/index.php/folder2':
-        case 'C:\xampp\htdocs\Projects\kayfa_projects\ARMP_test\index.php/folder2/':
+            //folder2
         case '/folder2/':
             return PageController::folder2();
         default:
